@@ -1,0 +1,50 @@
+﻿
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  cursor: default;
+  font-family: sans-serif;
+  font-size: 1.1em;
+}
+
+main {
+  display: block;
+}
+
+pre {
+  margin: 0;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-center-center {
+  align-items: center;
+  justify-content: center;
+}

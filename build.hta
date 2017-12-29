@@ -1,0 +1,46 @@
+﻿<meta http-equiv="x-ua-compatible" content="ie=11">
+<link href="src/modern-hta.css" rel="stylesheet">
+<script src="src/create+log.js"></script>
+<script src="src/get-sync.js"></script>
+<script src="src/watch-file.js"></script>
+<script src="src/modern-hta.js">
+
+  var js = [
+    'dep/polyfill.min.js',
+    'dep/babel.min.js',
+    'dep/fetch.js',
+    'src/get-sync.js',
+    'src/array-from.js',
+    'src/element-closest.js',
+    'src/create+log.js',
+    'src/require.js',
+    'src/watch-file.js',
+    'src/window-props.js',
+    'src/modern-hta.js'
+  ].map(function (file) {
+    return getSync(file)
+  })
+
+  var css = getSync('src/modern-hta.css').trim()
+    .replace(/\r\n/g, ' ')
+    .replace(/\s+/g, ' ')
+
+  js.unshift("create.call(document.head, 'style', '" + css + "')")
+
+  write('dist/modern-hta.js', js.join('\n'))
+
+  log('saved `dist/modern-hta.js`')
+
+  close()
+
+  function write (file, text) {
+    var stream = new ActiveXObject('ADODB.Stream')
+    stream.Open()
+    stream.CharSet = 'UTF-8'
+    stream.WriteText(text)
+    stream.SaveToFile(file, 2)
+    stream.Close()
+    stream = null
+  }
+
+</script>
