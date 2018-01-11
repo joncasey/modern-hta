@@ -35,7 +35,7 @@ function require (src, path) {
     else {
       code = transform(code)
       Function('exports', 'require', code)
-      (exports, function (src) { require(src, path) })
+      (exports, function (src) { return require(src, path) })
     }
 
   } catch (e) {
