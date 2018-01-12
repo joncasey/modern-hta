@@ -1,4 +1,4 @@
-if (!document.title) document.title = location.href.split('/').pop()
+if (!document.title) document.title = unescape(location.href).split('/').pop()
 
 var log = log || function (v) { console.log(v) }
 
