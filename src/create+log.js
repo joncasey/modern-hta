@@ -13,12 +13,11 @@ function create (tag, html) {
 }
 
 function log (v) {
-  var t = Object.prototype.toString.call(v)
-  var f = (log[t] || log[t.slice(8, -1)])
-  if (f) v = f(v)
+  var t = Object.prototype.toString.call(v).slice(8, -1)
   var to = (this && this.nodeName ? this : log.to)
   if (!to) to = log.to = create('pre.log')
   var el = create.call(to, 'div.log_line')
+  if (log[t]) v = log[t](v)
   el.textContent = v
   return el
 }
