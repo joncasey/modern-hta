@@ -22,6 +22,10 @@ function log (v) {
   return el
 }
 
+log.clear = function () {
+  if (log.to) log.to.textContent = ''
+}
+
 log.Array = function (v) {
   return v.join('\n')
 }
