@@ -4,7 +4,7 @@ var sys = new ActiveXObject('Wscript.Shell')
 var cwd = sys.CurrentDirectory
 
 function getSync (url) {
-  if (!/:/.test(url)) {
+  if (!/:/.test(url) && !/^\\{2}/.test(url)) {
     url = cwd + '/' + url
   }
   xhr.open('GET', url, false)
