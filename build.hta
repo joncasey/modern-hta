@@ -29,9 +29,10 @@
 
   write('dist/modern-hta.js', js.join('\n'))
 
-  log('saved `dist/modern-hta.js`')
 
-  close()
+  log('saved `dist/modern-hta.js` at ' + new Date().toISOString())
+
+  //close()
 
   function write (file, text) {
     var stream = new ActiveXObject('ADODB.Stream')
