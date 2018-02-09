@@ -1,4 +1,10 @@
-if (!document.title) document.title = unescape(location.href).split('/').pop()
+if (!document.title) {
+  document.title = unescape(location.href).split('/').pop()
+}
+
+if (!NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach
+}
 
 var log = log || function (v) { console.log(v) }
 
