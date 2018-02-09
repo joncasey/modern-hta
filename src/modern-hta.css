@@ -3,11 +3,6 @@
   box-sizing: inherit;
 }
 
-button, input {
-  font-family: inherit;
-  font-size: inherit;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -15,15 +10,44 @@ html {
 body {
   cursor: default;
   font-family: sans-serif;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+details,
 main {
   display: block;
 }
 
 pre {
   margin: 0;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
 }
 
 .fill {
