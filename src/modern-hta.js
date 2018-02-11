@@ -1,5 +1,6 @@
 if (!document.title) {
-  document.title = unescape(location.href).split('/').pop()
+  document.title = unescape(location.href)
+  .split('/').pop().replace(/\.hta$/i, '')
 }
 
 if (!NodeList.prototype.forEach) {
