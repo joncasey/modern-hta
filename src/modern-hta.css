@@ -58,12 +58,12 @@ template {
   bottom: 0;
 }
 
-.flex-col {
+.flex-col, .vbox {
   display: flex;
   flex-flow: column wrap;
 }
 
-.flex-row {
+.flex-row, .hbox {
   display: flex;
   flex-flow: row wrap;
 }
