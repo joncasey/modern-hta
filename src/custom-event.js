@@ -36,4 +36,26 @@
     e.initCustomEvent(type, init.bubbles, init.cancelable, init.detail)
   })
 
+  toFunc('MouseEvent', function (e, type, init) {
+    e.initMouseEvent(
+      type, init.bubbles, init.cancelable, init.view, init.detail,
+      init.screenX, init.screenY, init.clientX, init.clientY,
+      init.ctrlKey, init.altKey, init.shiftKey, init.metaKey,
+      init.button, init.relatedTarget
+    )
+  })
+
+  toFunc('PointerEvent', function (e, type, init) {
+    e.initPointerEvent(
+      type, init.bubbles, init.cancelable, init.view, init.detail,
+      init.screenX, init.screenY, init.clientX, init.clientY,
+      init.ctrlKey, init.altKey, init.shiftKey, init.metaKey,
+      init.button, init.relatedTarget,
+      init.offsetX, init.offsetY, init.width, init.height,
+      init.pressure, init.rotation, init.tiltX, init.tiltY,
+      init.pointerId, init.pointerType,
+      init.hwTimestamp, init.isPrimary
+    )
+  })
+
 }()
