@@ -8,6 +8,20 @@
       return event
     }
     func.prototype = window[name].prototype
+
+    var origPreventDefault = func.prototype.preventDefault
+    func.prototype.preventDefault = function () {
+      origPreventDefault.call(this)
+      try {
+        Object.defineProperty(this, 'defaultPrevented', {
+          get: function () { return true }
+        })
+      }
+      catch (e) {
+        this.defaultPrevented = true
+      }
+    }
+
     func.toString = function () {
       return 'function ' + name + '() {\n    [native code]\n}\n'
     }
