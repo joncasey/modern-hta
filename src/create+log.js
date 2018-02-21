@@ -23,7 +23,10 @@ function log (v) {
 }
 
 log.clear = function () {
-  if (log.to) log.to.textContent = ''
+  if (log.to) {
+    log.to.textContent = ''
+    log.to.scrollTop = 0
+  }
 }
 
 log.Array = function (v) {
