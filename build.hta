@@ -24,6 +24,7 @@
   var css = getSync('src/modern-hta.css').trim()
     .replace(/\r\n/g, ' ')
     .replace(/\s+/g, ' ')
+    .replace(/'/g, "\\'")
 
   js.unshift("create.call(document.head, 'style', '" + css + "')")
 

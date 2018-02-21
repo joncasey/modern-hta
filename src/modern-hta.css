@@ -5,12 +5,9 @@
 
 html {
   box-sizing: border-box;
-}
-
-body {
   cursor: default;
-  font-family: sans-serif;
-  font-size: 1.1rem;
+  font-family: 'Segoe UI';
+  font-size: 16px;
 }
 
 button,
@@ -39,6 +36,7 @@ main {
 }
 
 pre {
+  font-family: 'Consolas';
   margin: 0;
 }
 
