@@ -5,10 +5,12 @@
 <script src="src/watch-file.js"></script>
 <script src="src/modern-hta.js">
 
+  var outputFile = 'modern-hta.js'
+
   var js = [
-    'dep/polyfill.min.js',
-    'dep/babel.min.js',
-    'dep/fetch.js',
+    'https://unpkg.com/@babel/polyfill/dist/polyfill.min.js',
+    'https://unpkg.com/@babel/standalone/babel.min.js',
+    'https://unpkg.com/whatwg-fetch/fetch.js',
     'src/get-sync.js',
     'src/array-from.js',
     'src/element-closest.js',
@@ -28,10 +30,9 @@
 
   js.unshift("create.call(document.head, 'style', '" + css + "')")
 
-  write('dist/modern-hta.js', js.join('\n'))
+  write(outputFile, js.join('\n'))
 
-
-  log('saved `dist/modern-hta.js` at ' + new Date().toISOString())
+  log('saved `' + outputFile + '` at ' + new Date().toISOString())
 
   //close()
 
