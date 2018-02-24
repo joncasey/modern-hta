@@ -10,8 +10,8 @@ Sample `hta` file using [cdn](https://unpkg.com/modern-hta/modern-hta.js).
 <meta http-equiv="x-ua-compatible" content="ie=11">
 <script src="https://unpkg.com/modern-hta">
 
-  import `$.mjs`
-  import data from `data.json`
+  import '$.mjs'
+  import data from 'data.json'
 
   log(`Hello World`)
 
