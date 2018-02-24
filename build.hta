@@ -34,7 +34,16 @@
 
   log('saved `' + outputFile + '` at ' + new Date().toISOString())
 
-  //close()
+  autoClose(3)
+
+  function autoClose (secs) {
+    var el = log('')
+    var i = secs
+    setInterval(function () {
+      el.textContent = 'Closing in ' + i
+      if (i-- === 0) close()
+    }, 1000)
+  }
 
   function write (file, text) {
     var stream = new ActiveXObject('ADODB.Stream')
