@@ -1,0 +1,5 @@
+.*
+!.gitignore
+build/*
+test
+modern-hta.js
