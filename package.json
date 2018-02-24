@@ -1,7 +1,7 @@
 {
   "name": "modern-hta",
   "main": "modern-hta.js",
-  "decription": "Bringing modern code to the HTML Application (HTA)",
+  "description": "Run modern code in an HTML Application",
   "version": "0.0.0",
   "author": {
     "name": "Jon Casey",
