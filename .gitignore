@@ -1,6 +1,4 @@
-.*
-!.gitignore
-build/*
-test
+build/
+test/
 modern-hta.js
 *.tgz
