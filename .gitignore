@@ -3,3 +3,4 @@
 build/*
 test
 modern-hta.js
+*.tgz
