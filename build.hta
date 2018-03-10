@@ -7,7 +7,8 @@
 
   var outputFile = 'modern-hta.js'
 
-  var js = [
+  var files = [
+    'src/modern-hta.css',
     'https://unpkg.com/@babel/polyfill/dist/polyfill.min.js',
     'https://unpkg.com/@babel/standalone/babel.min.js',
     'https://unpkg.com/whatwg-fetch/fetch.js',
@@ -19,18 +20,18 @@
     'src/watch-file.js',
     'src/window-props.js',
     'src/modern-hta.js'
-  ].map(function (file) {
-    return getSync(file)
+  ]
+
+  var output = files.map(function (file) {
+    var code = getSync(file)
+    if (/\.css$/i.test(file)) {
+      var css = code.trim().replace(/\r\n*/g, ' ').replace(/\s+/g, ' ').replace(/'/g, "\\'")
+      code = "create.call(document.head, 'style', '" + css + "')"
+    }
+    return code
   })
 
-  var css = getSync('src/modern-hta.css').trim()
-    .replace(/\r\n/g, ' ')
-    .replace(/\s+/g, ' ')
-    .replace(/'/g, "\\'")
-
-  js.unshift("create.call(document.head, 'style', '" + css + "')")
-
-  write(outputFile, js.join('\n'))
+  write(outputFile, output.join('\n'))
 
   log('saved `' + outputFile + '` at ' + new Date().toISOString())
 
