@@ -7,7 +7,7 @@ function windowProps (r, m) {
   if (r) {
     r = x(r)
     resizeTo(r[0], r[1])
-  }
+  } else r = [0, 0]
   if (m) {
     m = m
       .replace(/^c$/, 'c c')
