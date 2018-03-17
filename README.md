@@ -81,16 +81,16 @@ function transform (code, options) {
   // returns transpiledCode
 }
 
-function watchFile (file, onchang ) {
+function watchFile (file, onchange) {
   // this intentionally is a quick/dirty-hack version
   // it runs a setTimeout and checks the last modified date
   // just wanted something super-simple & light-weight for now.
-  // undefined
+  // returns undefined
 }
 
 function windowProps (resize, moveto) {
   // this just simplifies window resizeTo & moveTo calls
   // and, allows them to run as quickly as possible
-  // undefined
+  // returns undefined
 }
 ```
