@@ -2,7 +2,7 @@
   "name": "modern-hta",
   "main": "modern-hta.js",
   "description": "Run modern code in an HTML Application",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Jon Casey",
     "email": "joncasey@gmail.com"
