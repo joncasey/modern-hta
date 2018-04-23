@@ -16,7 +16,7 @@ var transform = transform || function (code) { return code }
 if (window.Babel) {
   transform = function (code) {
     return Babel.transform(code, {
-      presets: ['es2015', 'es2016', 'es2017', 'stage-0']
+      presets: ['es2015', 'es2016', 'es2017', ['stage-0', {decoratorsLegacy:true}]]
     }).code.replace(/^"use strict";\s+/, '')
   }
 }
