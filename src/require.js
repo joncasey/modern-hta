@@ -11,7 +11,7 @@ function require (src, path) {
     src = path + '/' + src
   }
 
-  var re1 = /\/.\//g
+  var re1 = /\/\.\//g
   var re2 = /([^\\\/]+[\\{2}\/]\.{2}[\\{2}\/]?)/
   src = src.replace(/\\/g, '/').replace(re1, '/')
   while (re2.test(src)) src = src.replace(re2, '')
