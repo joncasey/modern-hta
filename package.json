@@ -1,18 +1,12 @@
 {
   "name": "modern-hta",
-  "description": "Run modern code in an HTML Application",
   "version": "0.1.0",
-  "author": {
-    "name": "Jon Casey",
-    "email": "joncasey@gmail.com"
-  },
+  "description": "Run modern code in an HTML Application",
   "main": "modern-hta.js",
   "unpkg": "modern-hta.js",
   "files": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/joncasey/modern-hta"
-  },
+  "author": "Jon Casey <joncasey@gmail.com>",
+  "repository": "github.com:joncasey/modern-hta",
   "keywords": [
     "HTA",
     "IE11",
