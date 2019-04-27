@@ -2,3 +2,5 @@ build/
 test/
 modern-hta.js
 *.tgz
+*-ts.*
+*-typescript.*
