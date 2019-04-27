@@ -11,17 +11,6 @@ var log = log || function (v) { console.log(v) }
 
 var script = script || document.scripts[document.scripts.length - 1]
 
-var transform = transform || function (code) { return code }
-
-if (window.Babel) {
-  transform = function (code) {
-    return Babel.transform(code, {
-      presets: ['es2015', 'es2016', 'es2017', ['stage-0', {decoratorsLegacy:true}], 'react'],
-      plugins: ['proposal-object-rest-spread']
-    }).code.replace(/^"use strict";\s+/, '')
-  }
-}
-
 if (window.watchFile) {
   watchFile(location.pathname.substr(1))
 }
@@ -35,7 +24,14 @@ if (script && window.windowProps) {
 
 if (script.text) {
   addEventListener('DOMContentLoaded', function () {
-    try { window.eval(transform(script.text)) }
-    catch (e) { log(e) }
+    var t = window.transform || function (s) { return s }
+    try {
+      var code = t(script.text)
+      if (t.eval) t.eval(code)
+      else window.eval(code)
+    }
+    catch (e) {
+      log(e)
+    }
   })
 }
