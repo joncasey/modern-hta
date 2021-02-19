@@ -41,7 +41,7 @@ npm install modern-hta
 
 ## Polyfills
 
-* [@babel/polyfill](https://github.com/babel/babel/tree/master/packages/babel-polyfill) - includes Promise, core.js, etc.
+* [core-js](https://github.com/zloirock/core-js)
 * [whatwg-fetch](https://github.com/github/fetch)
 * `Array.from` - extended to support [Enumerator](https://msdn.microsoft.com/en-us/library/6ch9zb09(v=vs.84).aspx) and [FileSystemObject Collections](https://msdn.microsoft.com/en-us/library/x75sb7ff(v=vs.84).aspx) 
 * `Element.closest()`
