@@ -30,6 +30,9 @@
       //code = "document.head.insertBefore(document.createElement('style'),document.head.querySelector('link,style')).textContent = '" + css + "'"
       code = "create.call(document.head, 'style', '" + css + "')"
     }
+    if (/babel/.test(file)) {
+      code = code.replace('try{d({},"")}catch(e){d=function(e,t,a){return e[t]=a}}', '')
+    }
     return code
   })
 
