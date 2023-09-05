@@ -1,6 +1,6 @@
 {
   "name": "modern-hta",
-  "version": "7.22.14",
+  "version": "7.22.15",
   "description": "Run modern code in an HTML Application",
   "main": "modern-hta.js",
   "unpkg": "modern-hta.js",
