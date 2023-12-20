@@ -7,7 +7,7 @@ html {
   box-sizing: border-box;
   cursor: default;
   font-family: 'Segoe UI';
-  font-size: 16px;
+  font-size: 100%;
 }
 
 button,
