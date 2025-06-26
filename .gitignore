@@ -4,3 +4,4 @@ modern-hta.js
 *.tgz
 *-ts.*
 *-typescript.*
+*.wsf
