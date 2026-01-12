@@ -1,6 +1,7 @@
 build/
 test/
 modern-hta.js
+.npmrc
 *.tgz
 *-ts.*
 *-typescript.*
